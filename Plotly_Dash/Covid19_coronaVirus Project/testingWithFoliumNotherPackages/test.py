@@ -67,7 +67,7 @@ lats=pd.read_csv('latlong.csv',sep='\t')
 
 
 app.layout=html.Div([
-        html.Iframe(id='map',srcDoc='children',width='90%',height='600px'),
+        html.Iframe(id='map',width='90%',height='600px'),
         dcc.Slider(
                 id='yearslider',
                 min=df['Date'].min(),
@@ -80,7 +80,7 @@ app.layout=html.Div([
         )
 
 @app.callback(
-    Output(component_id='map', component_property='children'),
+    Output(component_id='map', component_property='srcDoc'),
     [Input(component_id='yearslider', component_property='value')]
 )
 

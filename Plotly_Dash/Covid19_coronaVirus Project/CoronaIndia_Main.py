@@ -40,7 +40,7 @@ app.layout=html.Div([
                      html.Div(f'{Condata[-1]}',style=dict(fontSize=30,color='orange',float='left',width='25%')),
                      html.Div(f'{Decdata[-1]}',style=dict(fontSize=30,color='red',float='left',width='25%')),
                      html.Div(f'{Recdata[-1]}',style=dict(fontSize=30,color='green',float='left',width='25%')),
-                     html.Div(f'{round(Decdata[-1]/(Recdata[-1]+Decdata[-1]),4)}%',style=dict(fontSize=30,color='blue',float='left',width='25%')),
+                     html.Div(f'{round(Decdata[-1]/(Recdata[-1]+Decdata[-1])*100,4)}%',style=dict(fontSize=30,color='blue',float='left',width='25%')),
                      html.Div('Confirmed',style=dict(fontSize=15,color='orange',float='left',width='25%')),
                      html.Div('Deaths',style=dict(fontSize=15,color='red',float='left',width='25%')),
                      html.Div('Recovered',style=dict(fontSize=15,color='green',float='left',width='25%')),
